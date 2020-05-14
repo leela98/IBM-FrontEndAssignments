@@ -1,0 +1,83 @@
+<html>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+	<title>Welcome to Test Page</title>
+</head>
+<style>
+#content #first{
+            background-image: url("images/6.jpg");
+            background-color:brown;
+            height: 800px;
+            width: 400px;
+            
+        }
+        sp{
+            color: #fff;
+        }
+        #rightside{
+          float: right;
+          background-color: #DCEE8D;
+        }
+        #signin{
+          text-decoration-color: #0AB40E;
+          font-size: 50px;
+        }
+
+       blockquote {
+           margin-top: 150px;
+           margin-left: 10%;
+            width: 80%;
+            text-decoration: none;
+            text-decoration-color: #fff;
+        }
+       
+        fieldset{
+            
+            margin-right: 105px;
+            margin-left: 75px;
+            margin-top: 5%;
+            width: 75%;
+        }
+        form button{
+            width: 75%;
+        }
+          
+        </style>
+<body>
+	<div id="content">
+        <div id="container" class="row">
+            <div id="first" class="col-md-7">                  
+                <blockquote class="display-2 text-light text-center"><sp><strong>Test</strong></sp></blockquote>
+                <div class="h2 text-center text-light"><sp><strong>Login Page</strong></sp></div>
+            </div>
+            <div id = "rightside">
+    <div id="signin" class="display-5"><strong>SignUp</strong></div>
+            <br>
+            <br>
+                <form action="#">
+                    <fieldset class="form-group">
+                    First Name
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Your Name">
+                    </fieldset>
+                    <fieldset class="form-group">
+                    Last Name
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                    </fieldset>
+                    <fieldset class="form-group">
+                      Email-ID
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Id">
+                        </fieldset>
+                    <fieldset class="form-group">
+                      Password
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                        <fieldset class="form-group">
+                        <input type="checkbox" name="check"  required>I Agree to all the terms&conditions<br>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

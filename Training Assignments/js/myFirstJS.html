@@ -1,0 +1,34 @@
+<html> 
+<head><title>Fibonacci Series and Reversal of numbers using JS</title></head>
+<body>
+	<div id='Fibo'>
+		This is from Fibo Div...
+        <br>
+	</div>
+	<div id='Rev'>
+		This is from Rev Div...
+        <br>
+	</div>
+<script type="text/javascript">
+	document.getElementById('Fibo').innerHTML = "Generating Fibonacci Series till 89...";
+	var sum; 
+    var t1=0;
+    var t2=1;
+	for (var i = 1; i <= 10; ++i)
+        {
+            sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+            document.write(sum + "\n");
+        }
+    document.getElementById('Rev').innerHTML = "Printing reverse of 1704...";
+	var num = 1704, reversed = 0;
+        while(num != 0) {
+            var digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num = parseInt(num/10);
+        }
+     document.write("1704 Reversed is : " + reversed);
+</script>
+</body>
+</html>

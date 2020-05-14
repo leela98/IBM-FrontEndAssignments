@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validating Forms with JS</title>
+</head>
+<body>
+<form action="processData.html" onsubmit="return validateData();">
+	<input type="text" id="userName" placeholder="Your Name"><br>
+	<input type="text" id="userAddress" placeholder="Your Address"><br>
+	<input type="text" id="userPhone" placeholder="Your Phone"><br>
+	<input type="email" id="userMail" placeholder="Your Mail ID"><br>
+	Gender : <br>
+	<input type="radio" id="male" name="gender" value="male">
+	<label for="male">Male</label><br>
+	<input type="radio" id="female" name="gender" value="female">
+	<label for="female">Female</label><br>
+	<input type="radio" id="other" name="gender" value="other">
+	<label for="other">Other</label><br>
+	Your Qualification: <br>
+	<input type="checkbox" id="Qualification" name="school" value="10th" >
+	<label for="school">10th</label><br>
+	<input type="checkbox" id="Qualification" name="college" value="12th" >
+	<label for="college">12th</label><br>
+	<input type="checkbox" id="Qualification" name="UG" value="Btech" >
+	<label for="UG">UG</label><br>
+	<input type="checkbox" id="Qualification" name="PG" value="PG" >
+	<label for="PG">PG</label><br>
+	<label for="Hobbies">Your Hobbies : </label>
+	<select id="hobbies">
+  		<option value="reading">Reading</option>
+  		<option value="travelling">Travelling</option>
+  		<option value="cooking">Cooking</option>
+  		<option value="singing">Singing</option>
+  		<option value="drawing">Drawing</option>
+	</select>
+ 	<input type="submit" value="REGISTER">
+</form>
+<script type="text/javascript">
+	function validateData(){
+		var userName = document.getElementById("userName");
+		var userAddress = document.getElementById("userAddress");
+		var userPhone = document.getElementById("userPhone");
+		if(userName.value == ""){
+			alert("We don't like blank names...");
+			userName.focus();
+			return false;
+		}
+		else if(!isNaN(userName.value)){
+			alert("Names can't include digits");
+			userName.value = "";
+			userName.focus();
+			return false;
+		}
+		else if(!userAddress.value.length){
+			alert("Please Enter the Address");
+			userAddress.focus();
+			return false;
+		}
+
+		else if(!userPhone.value.length){
+			alert("Phone Number is required");
+			userPhone.focus();
+			return false;
+		}
+		else if(isNaN(userPhone.value)){
+			alert("Please enter the correct phone number");
+			userPhone.value = "";
+			userPhone.focus();
+			return false;
+		}
+		else if(userPhone.value.length!=10){
+			alert("Enter a Valid Phone Number");
+			userPhone.focus();
+			return false;
+		}
+		else if(!userMail.value.length){
+			alert("Mail ID is required");
+			userMail.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</body>
+</html>
